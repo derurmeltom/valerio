@@ -61,14 +61,6 @@ body {
   display: block;
 }
 
-.look span {
-  display: block;
-  margin-top: 15px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  opacity: 0.6;
-}
-
 /* STATEMENT */
 .statement {
   padding: 200px 60px;
