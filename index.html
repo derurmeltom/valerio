@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NEXSUS — Paris Runway</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALERIO — Pure Elegance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">VALERIO</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
 
-  <nav class="nav">
-    <span class="logo">Valerio</span>
-    <span class="menu">COLLECTION</span>
-  </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Pure Elegance</h1>
+            <p>Timeless luxury crafted for the discerning</p>
+            <a href="#collection" class="cta-btn">Entdecke die Kollektion</a>
+        </div>
+    </section>
 
-  <!-- HERO IMAGE -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>PARIS<br>RUNWAY</h1>
-      <p>Collection I</p>
-    </div>
-  </section>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>VALERIO</h2>
+            <p>VALERIO steht für reduzierte, zeitlose Schönheit. Jedes Stück wird mit höchster Präzision und edelsten Materialien gefertigt. Unsere Designs verzichten bewusst auf Überflüssiges – sie betonen Form, Material und Tragegefühl.</p>
+            <p>In einer Welt voller Lärm schaffen wir Stille. Pure. Elegant. VALERIO.</p>
+        </div>
+    </section>
 
-  <!-- LOOKBOOK -->
-  <section class="lookbook">
-    <div class="look">
-      <img src="model1.jpg" alt="Valerio Look 01">
-      <span>LOOK 01</span>
-    </div>
+    <section id="collection" class="gallery">
+        <h2>Die Kollektion</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/look1.jpg" alt="VALERIO Look 1">
+                <p class="caption">Midnight Silk Gown</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/look2.jpg" alt="VALERIO Look 2">
+                <p class="caption">Tailored Wool Overcoat</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/look3.jpg" alt="VALERIO Look 3">
+                <p class="caption">Asymmetric Cashmere Dress</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/look4.jpg" alt="VALERIO Look 4">
+                <p class="caption">Sculptural Evening Piece</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="look">
-      <img src="model2.jpg" alt="Valerio Look 02">
-      <span>LOOK 02</span>
-    </div>
+    <section id="contact" class="contact">
+        <h2>Kontakt</h2>
+        <p>Wir freuen uns auf deine Nachricht.</p>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="E-Mail" required>
+            <textarea placeholder="Deine Nachricht" rows="5" required></textarea>
+            <button type="submit">Senden</button>
+        </form>
+    </section>
 
-    <div class="look">
-      <img src="model3.jpg" alt="Valerio Look 03">
-      <span>LOOK 03</span>
-    </div>
-  </section>
+    <footer>
+        <p>© 2026 VALERIO. Alle Rechte vorbehalten.</p>
+    </footer>
 
-  <!-- STATEMENT -->
-  <section class="statement">
-    <p>
-      A study in silhouette.<br>
-      Designed in silence.<br>
-      Worn with intent.
-    </p>
-  </section>
-
-  <footer>
-    <span>© 2026 VALERIO — Paris</span>
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
