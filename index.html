@@ -2,21 +2,17 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>SWTOR: Eternal Conflict</title>
+    <title>Eternal Conflict Loading</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<div id="music-holder"></div>
 <div class="scanlines"></div>
 
-<div id="music-container" style="display:none;"></div>
-
 <div id="war-bg">
-    <div class="smoke"></div>
     <div class="hex-overlay"></div>
-
     <div class="blaster blue b1"></div>
     <div class="blaster blue b2"></div>
     <div class="blaster red r1"></div>
@@ -24,7 +20,7 @@
 </div>
 
 <div id="team-sidebar">
-    <div class="team-title">TEAMMITGLIEDER</div>
+    <div class="team-title">PERSONAL-DATENBANK</div>
     <div class="rank rank-owner"><div class="rank-title">INHABER</div><div class="member">Lukas</div></div>
     <div class="rank rank-gold"><div class="rank-title">PROJEKTLEITUNG</div><div class="member">derurmeltom</div></div>
     <div class="rank rank-gold"><div class="rank-title">TEAMLEITUNG</div><div class="member">Brike</div></div>
@@ -32,29 +28,25 @@
     <div class="rank rank-purple"><div class="rank-title">JR. ADMINISTRATOR</div><div class="member">Friggs</div></div>
 </div>
 
-<div id="ui">
+<div id="main-wrapper">
     <div id="ui-center">
         <h1 class="title">ETERNAL CONFLICT</h1>
         <p class="subtitle" id="status">INITIALISIERE HOLONETZ-VERBINDUNG...</p>
 
-        <div class="loading-wrapper">
-            <div class="faction-icon icon-left">
-                <img src="https://i.imgur.com/IQCRBKL.png" alt="Jedi Order">
-            </div>
-
-            <div class="progress-container">
+        <div class="loading-container">
+            <img class="faction-icon" src="https://i.imgur.com/IQCRBKL.png" alt="Jedi">
+            
+            <div class="progress-box">
                 <div class="progress-bar" id="progress"></div>
             </div>
 
-            <div class="faction-icon icon-right">
-                <img src="https://i.imgur.com/lAKntab.png" alt="Sith Empire">
-            </div>
+            <img class="faction-icon" src="https://i.imgur.com/lAKntab.png" alt="Sith">
         </div>
 
-        <div class="info">
-            <div class="info-box"><span class="label">MAP:</span> <span id="map">---</span></div>
-            <div class="info-box"><span class="label">GAMEMODE:</span> <span id="gamemode">---</span></div>
-            <div class="info-box"><span class="label">SPIELER:</span> <span id="players">-- / --</span></div>
+        <div class="server-info">
+            <div class="info-item"><span class="gold">MAP:</span> <span id="map">---</span></div>
+            <div class="info-item"><span class="gold">MODUS:</span> <span id="gamemode">---</span></div>
+            <div class="info-item"><span class="gold">STATUS:</span> <span id="players">-- / --</span></div>
         </div>
     </div>
 </div>
