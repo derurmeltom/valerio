@@ -2,79 +2,63 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VALERIO — Pure Elegance</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>SWTOR: Eternal Conflict</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">VALERIO</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#collection">Collection</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-            <div class="menu-toggle">☰</div>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Pure Elegance</h1>
-            <p>Timeless luxury crafted for the discerning</p>
-            <a href="#collection" class="cta-btn">Entdecke die Kollektion</a>
-        </div>
-    </section>
+<div class="scanlines"></div>
 
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2>VALERIO</h2>
-            <p>VALERIO steht für reduzierte, zeitlose Schönheit. Jedes Stück wird mit höchster Präzision und edelsten Materialien gefertigt. Unsere Designs verzichten bewusst auf Überflüssiges – sie betonen Form, Material und Tragegefühl.</p>
-            <p>In einer Welt voller Lärm schaffen wir Stille. Pure. Elegant. VALERIO.</p>
-        </div>
-    </section>
+<div id="music-container" style="display:none;"></div>
 
-    <section id="collection" class="gallery">
-        <h2>Die Kollektion</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/look1.jpg" alt="VALERIO Look 1">
-                <p class="caption">Midnight Silk Gown</p>
+<div id="war-bg">
+    <div class="smoke"></div>
+    <div class="hex-overlay"></div>
+
+    <div class="blaster blue b1"></div>
+    <div class="blaster blue b2"></div>
+    <div class="blaster red r1"></div>
+    <div class="blaster red r2"></div>
+</div>
+
+<div id="team-sidebar">
+    <div class="team-title">TEAMMITGLIEDER</div>
+    <div class="rank rank-owner"><div class="rank-title">INHABER</div><div class="member">Lukas</div></div>
+    <div class="rank rank-gold"><div class="rank-title">PROJEKTLEITUNG</div><div class="member">derurmeltom</div></div>
+    <div class="rank rank-gold"><div class="rank-title">TEAMLEITUNG</div><div class="member">Brike</div></div>
+    <div class="rank rank-purple"><div class="rank-title">ADMINISTRATOR</div><div class="member">Südwest</div></div>
+    <div class="rank rank-purple"><div class="rank-title">JR. ADMINISTRATOR</div><div class="member">Friggs</div></div>
+</div>
+
+<div id="ui">
+    <div id="ui-center">
+        <h1 class="title">ETERNAL CONFLICT</h1>
+        <p class="subtitle" id="status">INITIALISIERE HOLONETZ-VERBINDUNG...</p>
+
+        <div class="loading-wrapper">
+            <div class="faction-icon icon-left">
+                <img src="https://i.imgur.com/IQCRBKL.png" alt="Jedi Order">
             </div>
-            <div class="gallery-item">
-                <img src="images/look2.jpg" alt="VALERIO Look 2">
-                <p class="caption">Tailored Wool Overcoat</p>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
             </div>
-            <div class="gallery-item">
-                <img src="images/look3.jpg" alt="VALERIO Look 3">
-                <p class="caption">Asymmetric Cashmere Dress</p>
-            </div>
-            <div class="gallery-item">
-                <img src="images/look4.jpg" alt="VALERIO Look 4">
-                <p class="caption">Sculptural Evening Piece</p>
+
+            <div class="faction-icon icon-right">
+                <img src="https://i.imgur.com/lAKntab.png" alt="Sith Empire">
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <h2>Kontakt</h2>
-        <p>Wir freuen uns auf deine Nachricht.</p>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="E-Mail" required>
-            <textarea placeholder="Deine Nachricht" rows="5" required></textarea>
-            <button type="submit">Senden</button>
-        </form>
-    </section>
+        <div class="info">
+            <div class="info-box"><span class="label">MAP:</span> <span id="map">---</span></div>
+            <div class="info-box"><span class="label">GAMEMODE:</span> <span id="gamemode">---</span></div>
+            <div class="info-box"><span class="label">SPIELER:</span> <span id="players">-- / --</span></div>
+        </div>
+    </div>
+</div>
 
-    <footer>
-        <p>© 2026 VALERIO. Alle Rechte vorbehalten.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
