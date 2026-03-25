@@ -1,64 +1,31 @@
-/* ================= HINTERGRUND FIX ================= */
-#war-bg {
-    position: fixed;
-    inset: 0;
-    /* Falls deine Datei grafik.jpg heißt, wird sie hier geladen */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Exo 2', sans-serif; }
+
+body { background: #000; color: #fff; overflow: hidden; width: 100vw; height: 100vh; }
+
+/* HINTERGRUND FIX */
+#war-bg { 
+    position: fixed; 
+    inset: 0; 
     background: url('grafik.jpg') no-repeat center center; 
-    background-size: cover;
-    z-index: -5;
+    background-size: cover; 
+    z-index: -1; 
 }
 
-/* Dunkles Overlay, damit man die Schrift besser liest */
 #war-bg::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 90%);
+    background: rgba(0, 0, 0, 0.6);
 }
 
-.hex-overlay {
-    position: absolute;
-    inset: 0;
-    background-image: url('https://www.transparenttextures.com/patterns/hexellence.png');
-    opacity: 0.15;
-    pointer-events: none;
+.hex-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background-image: url('https://www.transparenttextures.com/patterns/hexellence.png'); 
+    opacity: 0.1; 
 }
 
-/* ================= LOGO GLOW FIX ================= */
-.loading-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.faction-icon {
-    width: 120px;
-    height: 120px;
-    opacity: 1;
-    animation: pulse 4s infinite ease-in-out;
-}
-
-/* Jedi Glow (Blau) */
-.icon-left {
-    filter: drop-shadow(0 0 20px rgba(42, 168, 255, 0.8)) drop-shadow(0 0 40px rgba(42, 168, 255, 0.4));
-}
-
-/* Sith Glow (Rot) */
-.icon-right {
-    filter: drop-shadow(0 0 20px rgba(255, 59, 59, 0.8)) drop-shadow(0 0 40px rgba(255, 59, 59, 0.4));
-}
-
-/* Die restliche CSS (Sidebar, Title, Progress-Bar) bleibt wie im letzten Schritt */* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Exo 2', sans-serif; }
-
-body { background: #000; color: #fff; overflow: hidden; width: 100vw; height: 100vh; }
-
-/* Hintergrund */
-#war-bg { position: fixed; inset: 0; background: radial-gradient(circle at center, #0d1a2b 0%, #000 90%); z-index: -1; }
-.hex-overlay { position: absolute; inset: 0; background-image: url('https://www.transparenttextures.com/patterns/hexellence.png'); opacity: 0.1; }
-
-/* Sidebar fixiert am linken Rand */
+/* SIDEBAR & ORIGINAL RANG-FARBEN */
 #team-sidebar {
     position: absolute;
     left: 40px;
@@ -66,74 +33,49 @@ body { background: #000; color: #fff; overflow: hidden; width: 100vw; height: 10
     transform: translateY(-50%);
     width: 280px;
     padding: 25px;
-    background: rgba(5, 10, 20, 0.9);
-    border-left: 3px solid #ffc107;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 92% 100%, 0 100%);
+    background: rgba(8, 12, 18, 0.95);
+    border-left: 3px solid #37474f;
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
     z-index: 10;
 }
 
-.team-title { color: #ffc107; font-size: 14px; letter-spacing: 2px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,193,7,0.2); padding-bottom: 5px; }
-.rank-title { font-size: 11px; color: #8a99a8; margin-bottom: 2px; }
-.member { font-size: 14px; margin-bottom: 15px; }
-.rank-owner .rank-title { color: #ff5252; }
-.rank-gold .rank-title { color: #ffc107; }
+.team-title { font-size: 16px; letter-spacing: 3px; margin-bottom: 20px; color: #b0bec5; }
+.rank { margin-bottom: 18px; }
+.rank-title { font-size: 12px; letter-spacing: 1.5px; margin-bottom: 4px; font-weight: bold; }
+.member { font-size: 12px; padding-left: 10px; opacity: 0.9; }
 
-/* Zentriertes Haupt-UI */
-#main-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* Die ursprünglichen Farben aus deinem Code */
+.rank-owner .rank-title { color: #ff5252; text-shadow: 0 0 10px rgba(255,80,80,0.9); }
+.rank-gold .rank-title { color: #ffd54f; text-shadow: 0 0 10px rgba(255,215,120,0.8); }
+.rank-purple .rank-title { color: #b388ff; text-shadow: 0 0 10px rgba(180,140,255,0.8); }
 
-#ui-center { width: 900px; text-align: center; }
-
+/* ZENTRIERUNG & UI */
+#main-wrapper { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+#ui-center { width: 1000px; text-align: center; }
 .title { font-size: 60px; letter-spacing: 12px; text-shadow: 0 0 20px rgba(255,255,255,0.2); }
-.subtitle { color: #ffc107; font-size: 12px; letter-spacing: 5px; margin: 10px 0 40px 0; }
+.subtitle { color: #ffd54f; font-size: 12px; letter-spacing: 5px; margin: 10px 0 40px 0; }
 
-/* Loading Bar & Icons */
-.loading-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-}
+/* LOADING & ICON GLOWS */
+.loading-container { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 40px; }
+.faction-icon { width: 110px; height: 110px; animation: pulse 3s infinite ease-in-out; }
+.faction-icon img { width: 100%; height: 100%; object-fit: contain; }
 
-.faction-icon {
-    width: 100px; /* Schön groß */
-    height: 100px;
-    filter: drop-shadow(0 0 15px rgba(255, 193, 7, 0.4));
-    animation: pulse 3s infinite ease-in-out;
-}
+/* Blauer Glow (Links) */
+.icon-jedi { filter: drop-shadow(0 0 15px rgba(42, 168, 255, 0.9)) drop-shadow(0 0 30px rgba(42, 168, 255, 0.4)); }
+/* Roter Glow (Rechts) */
+.icon-sith { filter: drop-shadow(0 0 15px rgba(255, 59, 59, 0.9)) drop-shadow(0 0 30px rgba(255, 59, 59, 0.4)); }
 
-.progress-box {
-    width: 500px;
-    height: 15px;
-    background: rgba(255, 193, 7, 0.05);
-    border: 1px solid #ffc107;
-    padding: 2px;
-}
-
-.progress-bar {
-    width: 0%;
-    height: 100%;
-    background: linear-gradient(90deg, #ff9800, #ffeb3b);
-    box-shadow: 0 0 20px rgba(255, 152, 0, 0.6);
-}
+.progress-box { width: 450px; height: 14px; background: rgba(255, 213, 79, 0.05); border: 1px solid #ffd54f; padding: 2px; }
+.progress-bar { width: 0%; height: 100%; background: #ffd54f; box-shadow: 0 0 15px rgba(255, 213, 79, 0.6); }
 
 .server-info { display: flex; justify-content: center; gap: 50px; }
-.gold { color: #ffc107; font-weight: bold; margin-right: 5px; font-size: 12px; }
-.info-item { font-size: 13px; }
+.gold { color: #ffd54f; font-weight: bold; font-size: 12px; }
 
-/* Animationen */
-@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } }
-
+/* ANIMATIONEN & LASER */
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.08); opacity: 1; } }
 .blaster { position: absolute; width: 300px; height: 1px; opacity: 0; }
 .blaster.blue { left: -20%; background: linear-gradient(to right, transparent, #2aa8ff, transparent); animation: fireR 5s infinite; }
 .blaster.red { right: -20%; background: linear-gradient(to left, transparent, #ff3b3b, transparent); animation: fireL 5s infinite 2.5s; }
 .b1 { top: 20%; } .b2 { top: 80%; } .r1 { top: 30%; } .r2 { top: 70%; }
-
 @keyframes fireR { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 40% { transform: translateX(150vw); opacity: 0; } 100% { opacity: 0; } }
 @keyframes fireL { 0% { transform: translateX(0); opacity: 0; } 10% { opacity: 1; } 40% { transform: translateX(-150vw); opacity: 0; } 100% { opacity: 0; } }
