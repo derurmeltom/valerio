@@ -1,13 +1,13 @@
 let totalFiles = 1;
 let neededFiles = 0;
 
-// Musik Setup
+// Musik-Funktion
 function playLoadingMusic() {
     const holder = document.getElementById("music-holder");
-    const audio = new Audio("loading.mp3"); // DATEINAME HIER ANPASSEN
-    audio.volume = 0.3;
+    const audio = new Audio("loading.mp3");
+    audio.volume = 0.2; // Lautstärke (0.0 bis 1.0)
     audio.loop = true;
-    audio.play().catch(e => console.log("Autoplay blockiert, Musik startet nach Klick oder Load."));
+    audio.play().catch(e => console.log("Musik wird nach dem Laden gestartet."));
 }
 
 playLoadingMusic();
