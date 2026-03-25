@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Eternal Conflict Loading</title>
+    <title>Eternal Conflict - Loading</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -13,6 +13,7 @@
 
 <div id="war-bg">
     <div class="hex-overlay"></div>
+    
     <div class="blaster blue b1"></div>
     <div class="blaster blue b2"></div>
     <div class="blaster red r1"></div>
@@ -20,12 +21,32 @@
 </div>
 
 <div id="team-sidebar">
-    <div class="team-title">PERSONAL-DATENBANK</div>
-    <div class="rank rank-owner"><div class="rank-title">INHABER</div><div class="member">Lukas</div></div>
-    <div class="rank rank-gold"><div class="rank-title">PROJEKTLEITUNG</div><div class="member">derurmeltom</div></div>
-    <div class="rank rank-gold"><div class="rank-title">TEAMLEITUNG</div><div class="member">Brike</div></div>
-    <div class="rank rank-purple"><div class="rank-title">ADMINISTRATOR</div><div class="member">Südwest</div></div>
-    <div class="rank rank-purple"><div class="rank-title">JR. ADMINISTRATOR</div><div class="member">Friggs</div></div>
+    <div class="team-title">TEAMMITGLIEDER</div>
+
+    <div class="rank rank-owner">
+        <div class="rank-title">INHABER</div>
+        <div class="member">Lukas</div>
+    </div>
+
+    <div class="rank rank-gold">
+        <div class="rank-title">PROJEKTLEITUNG</div>
+        <div class="member">derurmeltom</div>
+    </div>
+
+    <div class="rank rank-gold">
+        <div class="rank-title">TEAMLEITUNG</div>
+        <div class="member">Brike</div>
+    </div>
+
+    <div class="rank rank-purple">
+        <div class="rank-title">ADMINISTRATOR</div>
+        <div class="member">Südwest</div>
+    </div>
+
+    <div class="rank rank-purple">
+        <div class="rank-title">JR. ADMINISTRATOR</div>
+        <div class="member">Friggs</div>
+    </div>
 </div>
 
 <div id="main-wrapper">
@@ -34,13 +55,17 @@
         <p class="subtitle" id="status">INITIALISIERE HOLONETZ-VERBINDUNG...</p>
 
         <div class="loading-container">
-            <img class="faction-icon" src="https://i.imgur.com/IQCRBKL.png" alt="Jedi">
+            <div class="faction-icon icon-jedi">
+                <img src="https://i.imgur.com/IQCRBKL.png" alt="Jedi">
+            </div>
             
             <div class="progress-box">
                 <div class="progress-bar" id="progress"></div>
             </div>
 
-            <img class="faction-icon" src="https://i.imgur.com/lAKntab.png" alt="Sith">
+            <div class="faction-icon icon-sith">
+                <img src="https://i.imgur.com/lAKntab.png" alt="Sith">
+            </div>
         </div>
 
         <div class="server-info">
