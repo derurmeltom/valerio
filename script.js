@@ -30,5 +30,5 @@ function SetFilesNeeded(needed) { neededFiles = totalFiles - Math.max(0, needed)
 function GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode) {
     document.getElementById("map").innerText = mapname;
     document.getElementById("gamemode").innerText = gamemode;
-    document.getElementById("players").innerText = "? / " + maxplayers;
+    document.getElementById("players").innerText = players + " / " + maxplayers;
 }
