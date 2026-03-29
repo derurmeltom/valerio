@@ -25,6 +25,33 @@ body { background: #000; color: #fff; overflow: hidden; width: 100vw; height: 10
     opacity: 0.1; 
 }
 
+/* HINTERGRUND */
+#background {
+  position: fixed;
+  /* Increase size to prevent white edges during movement */
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  background: url("grafik.jpg") center / cover no-repeat;
+  filter: brightness(0.55);
+  z-index: -1;
+  /* Remove pulse animation to handle movement via JS */
+  transition: transform 0.2s ease-out;
+}
+
+@keyframes bgPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(0.55);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+  }
+}
+
 /* SIDEBAR & ORIGINAL RANG-FARBEN */
 #team-sidebar {
     position: absolute;
